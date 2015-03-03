@@ -4,12 +4,22 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery.session.js"></script>
 <script src="hello.js"></script>
 <script src="hello2.js"></script>
+<script src="hello3.js"></script>
 <script>
 $(document).ready(function() {
     $('#buttonId').click(function() {
     	DoAction($('#textfieldId').val());
+    });
+});
+
+$(document).ready(function() {
+    $('#buttonId2').click(function() {
+    	$.session.set('user', $('#textfieldId2').val());
+    	window.location.replace("index2.html");
+    	<!-- displayLoggedInUser(); -->
     });
 });
 </script>
@@ -21,7 +31,11 @@ $(document).ready(function() {
 <form>
 <input type="text" name="firstname" id="textfieldId">
 <a href="#" id="buttonId"> Click </a>
+<br/>
+<input type="text" name="firstname" id="textfieldId2">
+<a href="#" id="buttonId2"> login</a>
 <p class="greeting-content2">New Content </p>
+<p class="greeting-content3">User: </p>
 </form>
 
 </body>

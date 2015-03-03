@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery.session.js"></script>
+<script src="hello3.js"></script>
+<script>
+$(document).ready(function() {
+	document.getElementById('greeting-content3').innerHTML = $.session.get('user');
+});
+</script>
+</head>
+<body>
+
+<form>
+User logged in: <b><div id="greeting-content3"></div></b>
+</form>
+
+</body>
+</html>
