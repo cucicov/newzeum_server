@@ -7,15 +7,16 @@
 <script type="text/javascript" src="jquery.session.js"></script>
 <script src="hello3.js"></script>
 <script>
+<!-- execute at page load -->
 $(document).ready(function() {
-	document.getElementById('greeting-content3').innerHTML = $.session.get('user');
+	document.getElementById('login-content').innerHTML = $.session.get('user');
 });
 </script>
 </head>
 <body>
 
 <form>
-User logged in: <b><div id="greeting-content3"></div></b>
+User logged in is: <b><div id="login-content"></div></b>
 </form>
 
 </body>

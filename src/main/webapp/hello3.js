@@ -1,4 +1,4 @@
 function displayLoggedInUser()
 {
-	 $('.greeting-content3').append( $.session.get('user'));
+	 $('.login-content').append( $.session.get('user'));
 }

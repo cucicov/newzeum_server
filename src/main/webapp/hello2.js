@@ -1,4 +1,4 @@
-function DoAction( param )
+function callGetMsgWithParam( param )
 {
      $.ajax({
           type: "GET",
