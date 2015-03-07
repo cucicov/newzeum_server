@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery.session.js"></script>
+<script src="hello.js"></script>
+<script src="hello2.js"></script>
+<script src="hello3.js"></script>
+<script>
+$(document).ready(function() {
+    $('#msg-button').click(function() {
+    	callGetMsgWithParam($('#msgTextfield').val());
+    });
+});
+
+$(document).ready(function() {
+    $('#login-button').click(function() {
+    	$.session.set('user', $('#login-textfield').val());
+    	window.location.replace("index2.html");
+    });
+});
+</script>
+</head>
+<body>
+
+<p class="getJson-content">Call 'getJson' method at page load. Result: </p>
+
+<form>
+	<input type="text" name="firstname" id="msgTextfield">
+	<a href="#" id="msg-button"> Call 'getMsg' service method with param. </a>
+	<div class="greeting-content2">Result: </div>
+	<br/>
+	<input type="text" name="firstname" id="login-textfield">
+	<a href="#" id="login-button"> login</a>
+</form>
+
+</body>
+</html>
