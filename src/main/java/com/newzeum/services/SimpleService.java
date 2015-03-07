@@ -24,7 +24,7 @@ public class SimpleService {
 	@Path("/getMsg")
 	public Response getMsg(@QueryParam("param") String msg) {
  
-		String output = "Jersey say : " + msg;
+		String output = "New say : " + msg;
  
 		return Response.status(200).entity(output).build();
  
@@ -36,7 +36,7 @@ public class SimpleService {
 	public TestDTO getJson() {
  
 		TestDTO dto = new TestDTO();
-		dto.setProp("testProp");
+		dto.setProp("newProp");
  
 		return dto;
  
