@@ -36,7 +36,7 @@ public class SimpleService {
 	public TestDTO getJson() {
  
 		TestDTO dto = new TestDTO();
-		dto.setProp("testProp");
+		dto.setProp("newProp");
  
 		return dto;
  
