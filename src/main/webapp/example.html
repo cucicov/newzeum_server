@@ -38,3 +38,84 @@ $(document).ready(function() {
 
 </body>
 </html>
+
+
+
+
+$('.sub').click(
+    	    function(){
+    	    	$.ajax({
+    	            url: $.session.get('backendServerVar') + "/rest/getMuseumInfo",
+    	            data: "id="+$( ".inp" ).val(),
+    	        }).then(function(data) {
+    	        	
+    	        	$('.content').append( 
+    	    				"<h2>"+
+    	    				data.name+
+    		    	    	"</h2>"+
+    		    	    	"<p>"+
+    		    	    		data.description+
+    	    	    		"</p>"
+    	    			);
+    	    		
+    	        });
+    	    });
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    <form>
+	 		<input class="inp" type="text" name="code" value="Codul Exponatului">
+	  		<input class="sub" value="OK">
+		</form>
+    	    
+    	    
+    	    
+    	    
+    	    
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: $.session.get('backendServerVar') + "/rest/getMuseumInfo",
+        data: "id="+$.session.get('selectedMuseumId'),
+    }).then(function(data) {
+   	        	
+   	        	$('.content').append( 
+   	    				"<h2>"+
+   	    				data.name+
+   		    	    	"</h2>"+
+   		    	    	"<p>"+
+   		    	    		data.description+
+   	    	    		"</p>"
+   	    			);
+    		
+    		});
+    });
+    
+	$('.sub').click(
+	    function(){
+	    	$.ajax({
+	            url: $.session.get('backendServerVar') + "/rest/getMuseumInfo",
+	            data: "id="+$( ".inp" ).val(),
+	        }).then(function(data) {
+	        	
+	        	$('.content').append( 
+	    				"<h2>"+
+	    				data.name+
+		    	    	"</h2>"+
+		    	    	"<p>"+
+		    	    		data.description+
+	    	    		"</p>"
+	    			);
+	    		
+	        });
+	    });
+
+	
+	
+	
+	museum1.png
+</script>

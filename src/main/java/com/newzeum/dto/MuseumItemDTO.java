@@ -13,6 +13,28 @@ public class MuseumItemDTO implements Serializable {
 	private String imageUrl;
 	private String audioUrl;
 	
+	private int code; // -1 unknown Error code
+	private String infoMessage;
+	private String errorMessage;
+	
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
+	public String getInfoMessage() {
+		return infoMessage;
+	}
+	public void setInfoMessage(String infoMessage) {
+		this.infoMessage = infoMessage;
+	}
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
 	public Integer getId() {
 		return id;
 	}

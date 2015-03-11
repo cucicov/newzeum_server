@@ -3,8 +3,6 @@ package com.newzeum.dto;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
 public class MuseumDTO implements Serializable {
 
 	private static final long serialVersionUID = 7565165396962673788L;
@@ -14,6 +12,10 @@ public class MuseumDTO implements Serializable {
 	private String imageUrl; 
 	private String description;
 	private List<MuseumItemDTO> items;
+	
+	private int code; // -1 unknown Error code
+	private String infoMessage;
+	private String errorMessage;
 	
 	public List<MuseumItemDTO> getItems() {
 		return items;
@@ -50,6 +52,28 @@ public class MuseumDTO implements Serializable {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public int getCode() {
+		return code;
+	}
+
+	public String getInfoMessage() {
+		return infoMessage;
+	}
+
+	public void setInfoMessage(String infoMessage) {
+		this.infoMessage = infoMessage;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+	public void setCode(int code) {
+		this.code = code;
 	}
 	
 	

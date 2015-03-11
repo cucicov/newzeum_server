@@ -2,39 +2,33 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Newzeum</title>
 <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="jquery.session.js"></script>
-<script src="hello.js"></script>
-<script src="hello2.js"></script>
-<script src="hello3.js"></script>
-<script>
-$(document).ready(function() {
-    $('#msg-button').click(function() {
-    	callGetMsgWithParam($('#msgTextfield').val());
-    });
-});
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link href="http://141.85.159.61:8080/newzeum/apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="http://141.85.159.61:8080/newzeum/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+<link href="http://141.85.159.61:8080/newzeum/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+<link href="http://141.85.159.61:8080/newzeum/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+<link href="http://141.85.159.61:8080/newzeum/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+<link href="http://141.85.159.61:8080/newzeum/icon-hires.png" rel="icon" sizes="192x192" />
+<link href="http://141.85.159.61:8080/newzeum/icon-normal.png" rel="icon" sizes="128x128" />
 
-$(document).ready(function() {
-    $('#login-button').click(function() {
-    	$.session.set('user', $('#login-textfield').val());
-    	window.location.replace("index2.html");
-    });
-});
+<script>
+
 </script>
 </head>
-<body>
-
-<p class="getJson-content">Call 'getJson' method at page load. Result: </p>
-
-<form>
-	<input type="text" name="firstname" id="msgTextfield">
-	<a href="#" id="msg-button"> Call 'getMsg' service method with param. </a>
-	<div class="greeting-content2">Result: </div>
-	<br/>
-	<input type="text" name="firstname" id="login-textfield">
-	<a href="#" id="login-button"> login</a>
-</form>
-
-</body>
+	<body>
+	
+	<div class="header">
+		<h1>Newzeum</h1>
+	</div>
+	
+	<div class="body">
+		<ul class="museum-list"></ul>
+	</div>
+	
+	</body>
 </html>
