@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="jquery.session.js"></script>
+<script src="hello.js"></script>
+<script src="hello2.js"></script>
+<script src="hello3.js"></script>
+<script>
+$(document).ready(function() {
+    $('#msg-button').click(function() {
+    	callGetMsgWithParam($('#msgTextfield').val());
+    });
+});
+
+$(document).ready(function() {
+    $('#login-button').click(function() {
+    	$.session.set('user', $('#login-textfield').val());
+    	window.location.replace("index2.html");
+    });
+});
+</script>
+</head>
+<body>
+
+<p class="getJson-content">Call 'getJson' method at page load. Result: </p>
+
+<form>
+	<input type="text" name="firstname" id="msgTextfield">
+	<a href="#" id="msg-button"> Call 'getMsg' service method with param. </a>
+	<div class="greeting-content2">Result: </div>
+	<br/>
+	<input type="text" name="firstname" id="login-textfield">
+	<a href="#" id="login-button"> login</a>
+</form>
+
+</body>
+</html>
+
+
+
+
+$('.sub').click(
+    	    function(){
+    	    	$.ajax({
+    	            url: $.session.get('backendServerVar') + "/rest/getMuseumInfo",
+    	            data: "id="+$( ".inp" ).val(),
+    	        }).then(function(data) {
+    	        	
+    	        	$('.content').append( 
+    	    				"<h2>"+
+    	    				data.name+
+    		    	    	"</h2>"+
+    		    	    	"<p>"+
+    		    	    		data.description+
+    	    	    		"</p>"
+    	    			);
+    	    		
+    	        });
+    	    });
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    
+    	    <form>
+	 		<input class="inp" type="text" name="code" value="Codul Exponatului">
+	  		<input class="sub" value="OK">
+		</form>
+    	    
+    	    
+    	    
+    	    
+    	    
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: $.session.get('backendServerVar') + "/rest/getMuseumInfo",
+        data: "id="+$.session.get('selectedMuseumId'),
+    }).then(function(data) {
+   	        	
+   	        	$('.content').append( 
+   	    				"<h2>"+
+   	    				data.name+
+   		    	    	"</h2>"+
+   		    	    	"<p>"+
+   		    	    		data.description+
+   	    	    		"</p>"
+   	    			);
+    		
+    		});
+    });
+    
+	$('.sub').click(
+	    function(){
+	    	$.ajax({
+	            url: $.session.get('backendServerVar') + "/rest/getMuseumInfo",
+	            data: "id="+$( ".inp" ).val(),
+	        }).then(function(data) {
+	        	
+	        	$('.content').append( 
+	    				"<h2>"+
+	    				data.name+
+		    	    	"</h2>"+
+		    	    	"<p>"+
+		    	    		data.description+
+	    	    		"</p>"
+	    			);
+	    		
+	        });
+	    });
+
+	
+	
+	
+	museum1.png
+</script>
